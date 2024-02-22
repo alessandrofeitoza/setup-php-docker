@@ -16,10 +16,13 @@ Primeiro basta clonar o repositório
 
 `git clone bla bla bla`
 
+Agora entre na pasta com o terminal 
+`cd setup-php-docker`
+
 E agora basta rodar o docker
 
 `docker-compose up -d`
 
 Pronto,é sucesso!
 
-Acesse o http://127.0.0.1 
+Acesse o http://localhost:8080
