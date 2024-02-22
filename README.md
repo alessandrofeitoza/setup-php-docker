@@ -14,4 +14,12 @@ Essa estrutura já está dockerizada, então basta ter o docker compose rodando 
 
 Primeiro basta clonar o repositório
 
-`git clone `
+`git clone bla bla bla`
+
+E agora basta rodar o docker
+
+`docker-compose up -d`
+
+Pronto,é sucesso!
+
+Acesse o http://127.0.0.1 
