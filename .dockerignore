@@ -1,0 +1,8 @@
+Makefile
+README.md
+.gitignore
+.gitattributes
+.vccode
+**/.git
+**/.DS_Store
+**/node_modules
