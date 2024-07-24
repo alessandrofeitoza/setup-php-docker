@@ -14,9 +14,10 @@ Essa estrutura já está dockerizada, então basta ter o docker compose rodando 
 
 Primeiro basta clonar o repositório
 
-`git clone bla bla bla`
+`git clone https://github.com/alessandrofeitoza/setup-php-docker`
 
 Agora entre na pasta com o terminal 
+
 `cd setup-php-docker`
 
 E agora basta rodar o docker
@@ -26,3 +27,8 @@ E agora basta rodar o docker
 Pronto,é sucesso!
 
 Acesse o http://localhost:8080
+
+
+## Para alterar alguma coisa
+
+Dentro da pasta `public` existe um arquivo `index.php`, altere-o, salve e dê um F5 lá no navegaro <http://localhost:8080>
