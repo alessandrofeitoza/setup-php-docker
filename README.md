@@ -32,3 +32,12 @@ Acesse o http://localhost:8080
 ## Para alterar alguma coisa
 
 Dentro da pasta `public` existe um arquivo `index.php`, altere-o, salve e dê um F5 lá no navegaro <http://localhost:8080>
+
+## Para entrar no banco de dados
+`docker compose exec mysql bash`
+
+O usuario do banco é `user` e a senha é `password`
+
+> Basta  logar no mysql: `mysql -u user -ppassword`;
+
+Agora é só copiar o conteudo do arquivo [db.sql](db.sql), dá um enter e tá pronto o sorvetinho.
