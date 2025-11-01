@@ -4,9 +4,12 @@ $url = $_SERVER['REQUEST_URI'];
 
 $routes = include '../routes/web.php';
 
-view($routes[$url] ?? 'notFound');
-
-function view(string $file): void
-{
-    include "../src/views/{$file}.phtml";
+if (false === isset($routes[$url])) {
+    echo "Pagina nao encontrada";
+    exit;
 }
+
+$controller = $routes[$url][0];
+$action = $routes[$url][1];
+
+(new $controller)->$action();

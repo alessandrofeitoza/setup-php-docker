@@ -1,8 +1,12 @@
 <?php
 
+use App\Controller\HomeController;
+use App\Controller\ProductController;
+use App\Controller\UserController;
+
 return [
-    '/' => 'home',
-    '/admin' => 'admin',
-    '/admin/usuarios' => 'users',
-    '/admin/produtos' => 'products',
+    '/' => [HomeController::class, 'index'],
+    '/admin' => [HomeController::class, 'admin'],
+    '/admin/usuarios' => [UserController::class, 'list'],
+    '/admin/produtos' => [ProductController::class, 'list'],
 ];

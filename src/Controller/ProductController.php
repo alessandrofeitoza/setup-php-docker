@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-class ProductController
+class ProductController extends AbstractController
 {
-
+    public function list(): void
+    {
+        $this->view('products');
+    }
 }
