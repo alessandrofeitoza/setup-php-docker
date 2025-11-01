@@ -1,5 +1,7 @@
 <?php
 
+include "../vendor/autoload.php";
+
 $url = $_SERVER['REQUEST_URI'];
 
 $routes = include '../routes/web.php';
