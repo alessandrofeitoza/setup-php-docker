@@ -1,0 +1,13 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Controller;
+
+abstract class AbstractController
+{
+    public function view(string $file): void
+    {
+        include "../src/views/{$file}.phtml";
+    }
+}
