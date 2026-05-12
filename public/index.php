@@ -1,10 +1,10 @@
 <?php
 
-include "../vendor/autoload.php";
+include dirname(__DIR__).'/vendor/autoload.php';
 
 $url = $_SERVER['REQUEST_URI'];
 
-$routes = include '../routes/web.php';
+$routes = include dirname(__DIR__).'/routes/web.php';
 
 var_dump($routes);
 
