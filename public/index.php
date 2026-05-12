@@ -6,6 +6,8 @@ $url = $_SERVER['REQUEST_URI'];
 
 $routes = include '../routes/web.php';
 
+var_dump($routes);
+
 if (false === isset($routes[$url])) {
     echo "Pagina nao encontrada";
     exit;
