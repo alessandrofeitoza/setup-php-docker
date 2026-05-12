@@ -18,6 +18,8 @@ COPY ./docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN composer install --no-dev --optimize-autoloader
+
 RUN chown -R www-data:www-data /var/www
 
 EXPOSE 80
