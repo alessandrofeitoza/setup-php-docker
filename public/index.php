@@ -1,5 +1,8 @@
 <?php
 
+echo "Ola mundo";
+
+die();
 include "../vendor/autoload.php";
 
 $url = $_SERVER['REQUEST_URI'];
