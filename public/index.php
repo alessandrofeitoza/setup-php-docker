@@ -1,6 +1,11 @@
 <?php
 
 echo "Ola mundo";
+?>
+
+<h1>Aula 12/05/2026 18:50</h1>
+
+<?php
 
 die();
 include "../vendor/autoload.php";
