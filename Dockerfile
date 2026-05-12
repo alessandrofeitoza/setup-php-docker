@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     && docker-php-ext-install pdo pdo_mysql zip
 
-WORKDIR /var/www
+WORKDIR /app
 
 COPY . .
 
@@ -21,7 +21,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN composer install --no-dev --optimize-autoloader
 
-RUN chown -R www-data:www-data /var/www
+RUN chown -R www-data:www-data /app
 
 EXPOSE 80
 
