@@ -11,19 +11,18 @@ RUN apt-get update && apt-get install -y \
     curl \
     && docker-php-ext-install pdo pdo_mysql zip
 
+
 COPY docker/nginx/default.conf /etc/nginx/sites-available/default
 RUN ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
+# Garante que o diretório de logs do nginx exista e tenha permissão
+RUN mkdir -p /var/log/nginx && chown -R www-data:www-data /var/log/nginx
+
 WORKDIR /app
-
 COPY . .
-
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
-
 RUN chown -R www-data:www-data /app
 
 EXPOSE 80
 
-CMD service nginx start && php-fpm
+# Script rápido para rodar os dois
+CMD php-fpm -D && nginx -g "daemon off;"
