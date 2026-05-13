@@ -22,6 +22,9 @@ WORKDIR /app
 COPY . .
 RUN chown -R www-data:www-data /app
 
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader
+
 EXPOSE 80
 
 # Script rápido para rodar os dois
